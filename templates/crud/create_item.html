@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create_item</title>
+</head>
+<body>
+<h1>Создание анкеты продукта</h1>
+<form action="/add-item/" method="POST" enctype="multipart/form-data">
+  {{csrf_token}}
+  {{form.as_p}}
+  <button type="submit">Добавить</button>
+
+</form>
+
+</body>
+</html>

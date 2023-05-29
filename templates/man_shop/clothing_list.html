@@ -6,6 +6,7 @@
 </head>
 <body>
 <center>
+
 <h1>Мужская одежда</h1>
     {% for i in items %}
 
@@ -14,7 +15,7 @@
     <h3>{{ i.brand }}</h3>
     <p>{{ i.price }}</p>
     <button><a href="/clothing_details/{{ i.id }}">Узнать подробнее</a></button>
-    <hr>
+    <button><a href="/add-item/">Добавить продукт</a></button><hr>
     {% endfor %}
     <hr>
 </center>

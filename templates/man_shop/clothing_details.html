@@ -6,6 +6,7 @@
 </head>
 <body>
 <center>
+
   <h1>{{item.name}}</h1>
   <img src="{{item.image.url}}" alt="" width="400" height="400">
   <p>Бренд: {{ item.brand }}</p>
@@ -14,9 +15,13 @@
   <p>Размер: {{ item.size }}</p>
   <p>Категория: {{ item.category }}</p>
   <p>Материал: {{ item.material }}</p>
-
-
-
+    <button> <a href="/clothing_details.html/{{iten_id}/delete/">Удалить</a></button>
+    <button> <a href="/clothing_details.html/{{iten_id}/update/">Редактевировать</a></button>
+  {% for i in item_id.comment_object.all %}
+  <h1>{{i.text}}</h1>
+  <p>{{i.created_at}}</p>
+  <br><br><br>
+  {% endfor %}
 </center>
 </body>
 </html>

@@ -24,3 +24,10 @@ class Clothingitem(models.Model):
     material = models.CharField(max_length=20, choices=MATERIAL_CHOICES)
     def __str__(self):
         return self.name
+class Reviews(models.Model):
+    name_reviews = models.ForeignKey(Clothingitem, on_delete=models.CASCADE, related_name='comment_object')
+    description = models.TextField('Ваш отзыв')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.description
