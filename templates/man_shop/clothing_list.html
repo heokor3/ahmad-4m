@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing_list</title>
+</head>
+<body>
+<center>
+<h1>Мужская одежда</h1>
+    {% for i in items %}
+
+    <h3>{{ i.name }}</h3>
+    <img src="{{ i.image.url }}" alt="" width="400" height="400">
+    <h3>{{ i.brand }}</h3>
+    <p>{{ i.price }}</p>
+    <button><a href="/clothing_details/{{ i.id }}">Узнать подробнее</a></button>
+    <hr>
+    {% endfor %}
+    <hr>
+</center>
+</body>
+</html>

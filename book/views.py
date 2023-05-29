@@ -1,7 +1,14 @@
+# from django.shortcuts import render
+# from . import models
+#
+#
+# def book_list(request):
+#     book = models.Book.objects.all()
+#     return render(request, 'booklist.html', {'book': book)
 from django.shortcuts import render
-from .models import Book
+from . import models
 
 
 def book_list(request):
-    books = Book.objects.all()
-    return render(request, 'book_list.html', {'books': books})
+    book = models.Book.objects.all()
+    return render(request, 'book.html', {'book': book})

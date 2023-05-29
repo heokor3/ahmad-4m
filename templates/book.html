@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Book</title>
 </head>
 <body>
 
 {% for book in books %}
 
 {{ book.title}}<br>
-<img src="{{book.image.url}}" alt=""><br>
-{{ book.description }}
-{{book.created_at}}
-{{book.type_book}}
+<img src="{{i.image.url}}" alt="" width="350" height="300"><br>
+{{book.description }}<br>
+{{book.created_at}}<br>
+{{book.type_book}}<br>
 {{book.genre}}
 <hr>
 {% endfor %}
